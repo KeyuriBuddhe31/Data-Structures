@@ -1,32 +1,32 @@
 #include<stdio.h>
 void main() {
-	int a[20], i, n, j, temp, pos;
+	int arr[100], i, n, j, temp, pos;
 	printf("Enter value of n : ");
 	scanf("%d", &n);
 
 	for(i=0;i<n;i++){
-		printf("Enter element for a[%d] : ",i);
-		scanf("%d",&a[i]);
+		printf("Enter element for arr[%d] : ",i);
+		scanf("%d",&arr[i]);
 	}
 	printf("Before sorting the elements in the array are\n");
 	for(i=0;i<n;i++){
-		printf("Value of a[%d] = %d\n",i,a[i]);
+		printf("Value of arr[%d] = %d\n",i,arr[i]);
 	}
 	
 	for(i=1;i<n;i++){
-		temp=a[i];
+		temp=arr[i];
 		j=i-1;
-		while(j>=0 && a[j]>temp){
-			a[j+1]=a[j];
+		while(j>=0 && arr[j]>temp){
+			arr[j+1]=arr[j];
 			j=j-1;
 		}
-		a[j+1]=temp;
+		arr[j+1]=temp;
 	}
 	
 	
-	printf("After sorting the elements in the array are\n");
+	printf("Sorted Array : \n");
 	for(i=0;i<n;i++){
-		printf("Value of a[%d] = %d\n",i,a[i]);
+		printf("Value of arr[%d] = %d\n",i,arr[i]);
 	}
 	
 }
